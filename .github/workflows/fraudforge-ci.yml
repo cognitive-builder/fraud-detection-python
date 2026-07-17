@@ -31,7 +31,7 @@ jobs:
           cache-dependency-path: autodata-bian-fraudforge/pyproject.toml
       - run: python -m pip install --upgrade pip && pip install -e .[dev]
       - run: ruff check .
-      - run: pytest -q
+      - run: python -m pytest -q
       - run: python -m fraudforge --output artifacts/ci --rows 350 --rounds 5 --seed 42 --meta-candidates 1
       - uses: actions/upload-artifact@v4
         with:
