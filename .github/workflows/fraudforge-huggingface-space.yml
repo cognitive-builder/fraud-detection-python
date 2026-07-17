@@ -1,0 +1,37 @@
+name: Publish FraudForge to Hugging Face
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: autodata-bian-fraudforge
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: autodata-bian-fraudforge/pyproject.toml
+      - run: pip install "huggingface-hub>=0.30,<2"
+      - name: Validate deployment configuration
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE_ID: ${{ vars.HF_SPACE_ID }}
+        run: |
+          test -n "$HF_TOKEN" || (echo "Missing HF_TOKEN repository secret" && exit 1)
+          test -n "$HF_SPACE_ID" || (echo "Missing HF_SPACE_ID repository variable" && exit 1)
+      - name: Create or update Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE_ID: ${{ vars.HF_SPACE_ID }}
+        run: python scripts/publish_hf_space.py

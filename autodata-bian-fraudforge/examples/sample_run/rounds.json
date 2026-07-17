@@ -1,0 +1,144 @@
+[
+  {
+    "round": 1,
+    "recipe": {
+      "fraud_prevalence": 0.3,
+      "ambiguous_rate": 0.35,
+      "signal_strength": 1.2,
+      "noise": 0.12,
+      "legitimate_hard_negative_rate": 0.18,
+      "scenario_weights": {
+        "cnp_velocity": 0.18,
+        "impossible_travel": 0.14,
+        "account_takeover": 0.19,
+        "mule_fanout": 0.14,
+        "synthetic_identity": 0.11,
+        "merchant_mismatch": 0.12,
+        "threshold_pattern": 0.12
+      }
+    },
+    "metrics": {
+      "row_count": 700,
+      "fraud_count": 188,
+      "fraud_prevalence": 0.26857142857142857,
+      "weak_precision": 1.0,
+      "weak_recall": 0.324468085106383,
+      "weak_f1": 0.4899598393574297,
+      "weak_false_positive_rate": 0.0,
+      "strong_precision": 1.0,
+      "strong_recall": 1.0,
+      "strong_f1": 1.0,
+      "strong_false_positive_rate": 0.0,
+      "recall_gap": 0.675531914893617,
+      "weak_score_std": 0.11188440098455849,
+      "strong_score_std": 0.3749870081318921,
+      "validity_rate": 1.0,
+      "duplicate_rate": 0.0,
+      "family_coverage": 1.0,
+      "preference_pair_rate": 0.18142857142857144,
+      "accepted": false,
+      "quality_score": 0.9747270066419004,
+      "rejection_reasons": [
+        "WEAK_STRONG_GAP_OUTSIDE_TARGET_BAND"
+      ]
+    },
+    "decision": "REVISE",
+    "feedback": "examples are too degenerate for the weak solver; threshold_pattern contributes the richest strong-win signal",
+    "meta_validation_score": 0.9930079365079365,
+    "selected_by_meta_search": true
+  },
+  {
+    "round": 2,
+    "recipe": {
+      "fraud_prevalence": 0.3,
+      "ambiguous_rate": 0.26999999999999996,
+      "signal_strength": 1.29,
+      "noise": 0.09999999999999999,
+      "legitimate_hard_negative_rate": 0.18,
+      "scenario_weights": {
+        "cnp_velocity": 0.18,
+        "impossible_travel": 0.14,
+        "account_takeover": 0.19,
+        "mule_fanout": 0.14,
+        "synthetic_identity": 0.11,
+        "merchant_mismatch": 0.12,
+        "threshold_pattern": 0.12
+      }
+    },
+    "metrics": {
+      "row_count": 700,
+      "fraud_count": 202,
+      "fraud_prevalence": 0.2885714285714286,
+      "weak_precision": 1.0,
+      "weak_recall": 0.39603960396039606,
+      "weak_f1": 0.5673758865248227,
+      "weak_false_positive_rate": 0.0,
+      "strong_precision": 1.0,
+      "strong_recall": 1.0,
+      "strong_f1": 1.0,
+      "strong_false_positive_rate": 0.0,
+      "recall_gap": 0.6039603960396039,
+      "weak_score_std": 0.11498756898207807,
+      "strong_score_std": 0.38566354211021453,
+      "validity_rate": 0.9985714285714286,
+      "duplicate_rate": 0.0,
+      "family_coverage": 1.0,
+      "preference_pair_rate": 0.17285714285714285,
+      "accepted": false,
+      "quality_score": 0.9936612708889937,
+      "rejection_reasons": [
+        "WEAK_STRONG_GAP_OUTSIDE_TARGET_BAND"
+      ]
+    },
+    "decision": "REVISE",
+    "feedback": "examples are too degenerate for the weak solver; threshold_pattern contributes the richest strong-win signal",
+    "meta_validation_score": 1.0,
+    "selected_by_meta_search": true
+  },
+  {
+    "round": 3,
+    "recipe": {
+      "fraud_prevalence": 0.3,
+      "ambiguous_rate": 0.1593088620717004,
+      "signal_strength": 1.4584182488440118,
+      "noise": 0.07161969615946312,
+      "legitimate_hard_negative_rate": 0.19748253811824013,
+      "scenario_weights": {
+        "cnp_velocity": 0.21725337899432717,
+        "impossible_travel": 0.13363966700096855,
+        "account_takeover": 0.18136811950131446,
+        "mule_fanout": 0.13363966700096855,
+        "synthetic_identity": 0.10500259550076099,
+        "merchant_mismatch": 0.11454828600083017,
+        "threshold_pattern": 0.11454828600083017
+      }
+    },
+    "metrics": {
+      "row_count": 700,
+      "fraud_count": 220,
+      "fraud_prevalence": 0.3142857142857143,
+      "weak_precision": 1.0,
+      "weak_recall": 0.4863636363636364,
+      "weak_f1": 0.654434250764526,
+      "weak_false_positive_rate": 0.0,
+      "strong_precision": 1.0,
+      "strong_recall": 1.0,
+      "strong_f1": 1.0,
+      "strong_false_positive_rate": 0.0,
+      "recall_gap": 0.5136363636363637,
+      "weak_score_std": 0.13643064695504242,
+      "strong_score_std": 0.3955725376348363,
+      "validity_rate": 0.9985714285714286,
+      "duplicate_rate": 0.0,
+      "family_coverage": 1.0,
+      "preference_pair_rate": 0.16,
+      "accepted": true,
+      "quality_score": 1.0,
+      "rejection_reasons": []
+    },
+    "decision": "ACCEPT",
+    "feedback": "threshold_pattern contributes the richest strong-win signal",
+    "meta_validation_score": null,
+    "selected_by_meta_search": false
+  }
+]

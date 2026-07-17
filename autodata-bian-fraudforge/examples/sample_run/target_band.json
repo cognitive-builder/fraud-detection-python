@@ -1,0 +1,13 @@
+{
+  "weak_recall_min": 0.25,
+  "weak_recall_max": 0.6,
+  "strong_recall_min": 0.82,
+  "gap_min": 0.16,
+  "gap_max": 0.58,
+  "strong_false_positive_rate_max": 0.12,
+  "validity_rate_min": 0.985,
+  "family_coverage_min": 0.95,
+  "duplicate_rate_max": 0.015,
+  "weak_score_std_min": 0.08,
+  "preference_pair_rate_min": 0.06
+}

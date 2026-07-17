@@ -1,0 +1,24 @@
+{
+  "protocol": "fixed logistic learner; shifted synthetic holdout; identical seed and threshold",
+  "baseline_training_rows": 1800,
+  "agentic_enrichment_rows": 699,
+  "holdout_rows": 2200,
+  "before": {
+    "roc_auc": 0.9976851660404026,
+    "precision": 0.987603305785124,
+    "recall": 0.9547270306258322,
+    "f1": 0.970886932972241
+  },
+  "after": {
+    "roc_auc": 0.9992069465235678,
+    "precision": 0.9918032786885246,
+    "recall": 0.966711051930759,
+    "f1": 0.9790964261631827
+  },
+  "delta": {
+    "roc_auc": 0.0015217804831652026,
+    "precision": 0.004199972903400573,
+    "recall": 0.011984021304926817,
+    "f1": 0.008209493190941664
+  }
+}

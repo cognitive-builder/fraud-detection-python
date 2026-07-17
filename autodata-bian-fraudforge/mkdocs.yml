@@ -1,0 +1,50 @@
+site_name: FraudForge Autodata Lab
+site_description: Agentic synthetic data for BIAN Fraud Evaluation
+site_url: https://cognitive-builder.github.io/fraud-detection-python/
+repo_url: https://github.com/cognitive-builder/fraud-detection-python
+repo_name: cognitive-builder/fraud-detection-python
+edit_uri: edit/main/autodata-bian-fraudforge/docs/
+docs_dir: docs
+site_dir: site
+strict: true
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Home: index.md
+  - Research Review: paper-review.md
+  - Architecture: architecture.md
+  - BIAN Use Case: bian-use-case.md
+  - Implementation: implementation.md
+  - Evaluation: evaluation.md
+  - Governance: governance.md
+  - Deployment: deployment.md
+  - Roadmap: roadmap.md
+  - Sources: sources.md
