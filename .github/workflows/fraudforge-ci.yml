@@ -1,0 +1,39 @@
+name: FraudForge CI
+
+on:
+  push:
+    branches: [main, "agent/fraudforge-autodata-bian-demo"]
+    paths:
+      - "autodata-bian-fraudforge/**"
+      - ".github/workflows/fraudforge-ci.yml"
+  pull_request:
+    paths:
+      - "autodata-bian-fraudforge/**"
+      - ".github/workflows/fraudforge-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: autodata-bian-fraudforge
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: autodata-bian-fraudforge/pyproject.toml
+      - run: python -m pip install --upgrade pip && pip install -e .[dev]
+      - run: ruff check .
+      - run: python -m pytest -q
+      - run: python -m fraudforge --output artifacts/ci --rows 350 --rounds 5 --seed 42 --meta-candidates 1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fraudforge-ci-artifacts
+          path: autodata-bian-fraudforge/artifacts/ci

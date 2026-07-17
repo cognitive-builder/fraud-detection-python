@@ -1,0 +1,16 @@
+{
+  "fraud_prevalence": 0.3,
+  "ambiguous_rate": 0.1593088620717004,
+  "signal_strength": 1.4584182488440118,
+  "noise": 0.07161969615946312,
+  "legitimate_hard_negative_rate": 0.19748253811824013,
+  "scenario_weights": {
+    "cnp_velocity": 0.21725337899432717,
+    "impossible_travel": 0.13363966700096855,
+    "account_takeover": 0.18136811950131446,
+    "mule_fanout": 0.13363966700096855,
+    "synthetic_identity": 0.10500259550076099,
+    "merchant_mismatch": 0.11454828600083017,
+    "threshold_pattern": 0.11454828600083017
+  }
+}

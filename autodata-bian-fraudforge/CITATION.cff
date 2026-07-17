@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use FraudForge, please cite this software and the Autodata paper."
+title: "FraudForge: Agentic Autodata for BIAN Fraud Evaluation"
+type: software
+authors:
+  - family-names: Nagulakonda
+    given-names: Shashi Kumar
+version: 0.1.0
+date-released: 2026-07-17
+license: Apache-2.0
+repository-code: "https://github.com/cognitive-builder/fraud-detection-python"
+keywords:
+  - synthetic data
+  - agentic AI
+  - banking
+  - fraud evaluation
+  - BIAN
+references:
+  - type: article
+    title: "Autodata: an agentic data scientist to create high-quality synthetic data"
+    year: 2026
+    url: "https://arxiv.org/abs/2606.25996"

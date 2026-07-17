@@ -1,0 +1,93 @@
+{
+  "FraudEvaluationAssessmentReference": "FE-78532216FCB2",
+  "ProductProductionSessionReference": {
+    "SessionIdentification": {
+      "IdentifierValue": "fraudforge-synthetic-batch"
+    }
+  },
+  "FraudEvaluationTestProfile": {
+    "Profile": "Agentic synthetic edge-case evaluation"
+  },
+  "FraudEvaluationEnsembleTechniqueType": "RULE_MODEL_MAX",
+  "FraudEvaluationEnsembleTechniqueDefinition": "Transparent bounded rule score combined with a stronger contextual ensemble",
+  "FraudEvaluationProductionAnomalyRecord": [
+    {
+      "transactionReference": "TX-0000000-3248",
+      "ensembleScore": 0.936684,
+      "ruleScore": 0.555,
+      "modelScore": 0.936684,
+      "evidenceFamilies": [
+        "account_takeover"
+      ],
+      "recommendedDisposition": "REFER_FOR_INVESTIGATION"
+    },
+    {
+      "transactionReference": "TX-0000007-2361",
+      "ensembleScore": 0.929325,
+      "ruleScore": 0.555,
+      "modelScore": 0.929325,
+      "evidenceFamilies": [
+        "account_takeover"
+      ],
+      "recommendedDisposition": "REFER_FOR_INVESTIGATION"
+    },
+    {
+      "transactionReference": "TX-0000010-1557",
+      "ensembleScore": 0.86343,
+      "ruleScore": 0.035,
+      "modelScore": 0.86343,
+      "evidenceFamilies": [
+        "threshold_pattern"
+      ],
+      "recommendedDisposition": "REFER_FOR_INVESTIGATION"
+    },
+    {
+      "transactionReference": "TX-0000011-7310",
+      "ensembleScore": 0.919174,
+      "ruleScore": 0.345,
+      "modelScore": 0.919174,
+      "evidenceFamilies": [
+        "account_takeover"
+      ],
+      "recommendedDisposition": "REFER_FOR_INVESTIGATION"
+    }
+  ],
+  "FraudEvaluationProductionAnomalyProductionTransactionReference": [
+    {
+      "TransactionIdentification": {
+        "IdentifierValue": "TX-0000000-3248"
+      }
+    },
+    {
+      "TransactionIdentification": {
+        "IdentifierValue": "TX-0000007-2361"
+      }
+    },
+    {
+      "TransactionIdentification": {
+        "IdentifierValue": "TX-0000010-1557"
+      }
+    },
+    {
+      "TransactionIdentification": {
+        "IdentifierValue": "TX-0000011-7310"
+      }
+    }
+  ],
+  "RuleSetsandDecisionTrees": {
+    "name": "FraudForge WeakRuleSolver",
+    "positiveCount": 3
+  },
+  "Models": {
+    "name": "FraudForge StrongEnsembleSolver",
+    "positiveCount": 4
+  },
+  "assessmentSummary": {
+    "transaction_count": 12,
+    "anomaly_count": 4,
+    "weak_rule_positive_count": 3,
+    "strong_model_positive_count": 4,
+    "ensemble": "max(strong model, bounded rules)"
+  },
+  "assessedAt": "2026-07-17T04:57:30.444967+00:00"
+}

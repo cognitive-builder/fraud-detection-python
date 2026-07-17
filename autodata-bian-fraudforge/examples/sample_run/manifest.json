@@ -1,0 +1,26 @@
+{
+  "name": "FraudForge Autodata run",
+  "accepted": true,
+  "selected_round": 3,
+  "rows": 700,
+  "preference_pairs": 112,
+  "files": [
+    "bian_request.json",
+    "bian_response.json",
+    "downstream_utility.json",
+    "experience.jsonl",
+    "family_metrics.csv",
+    "fixture_generators.jsonl",
+    "metrics.json",
+    "preference_pairs.jsonl",
+    "recipe.json",
+    "recipe_trajectory.csv",
+    "rollouts.jsonl",
+    "rounds.json",
+    "rubric_items.jsonl",
+    "sft_examples.jsonl",
+    "target_band.json",
+    "transactions.csv",
+    "verifiers.jsonl"
+  ]
+}
